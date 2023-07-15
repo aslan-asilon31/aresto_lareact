@@ -1,0 +1,24 @@
+==== template backend
+https://www.bootstrapdash.com/product/skydash-free
+
+
+===== when cannot push to github 
+after generate new token
+git remote set-url origin https://<token>@github.com/<username>/<repo>
+
+===== emoji
+https://emojipedia.org/
+
+================= tables using Yajra Datatables
+https://codeanddeploy.com/blog/laravel/step-by-step-tutorial-implementing-yajra-datatables-in-laravel-10
+
+========== dokumentasi API using swagger 
+-  https://www.youtube.com/watch?v=p3Z3RR091Wk
+- https://www.youtube.com/watch?v=OhNlhvFG96M
+
+----generate : php artisan l5-swagger:generate
+
+
+
+features :
+- tables using Yajra Datatables

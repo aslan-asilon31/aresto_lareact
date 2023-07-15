@@ -1,0 +1,23 @@
+Table: Restaurants
+Columns: id (primary key), name, description, address, contact_number, website, opening_hours, rating
+
+Table: MenuItems
+Columns: id (primary key), restaurant_id (foreign key), name, description, price, image, category
+
+Table: Categories
+Columns: id (primary key), name
+
+Table: Reservations
+Columns: id (primary key), restaurant_id (foreign key), customer_name, contact_number, reservation_date, reservation_time, number_of_guests, special_requests
+
+Table: Reviews
+Columns: id (primary key), restaurant_id (foreign key), customer_name, review_text, rating, review_date
+
+Table: StaffMembers
+Columns: id (primary key), restaurant_id (foreign key), name, designation, bio, profile_image
+
+Table: Orders
+Columns: id (primary key), restaurant_id (foreign key), customer_name, contact_number, order_date, total_amount, status
+
+Table: OrderItems
+Columns: id (primary key), order_id (foreign key), menu_item_id (foreign key), quantity, item_price
