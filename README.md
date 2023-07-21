@@ -1,66 +1,110 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Aresto - Restaurant Management App
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![aresto_landingpage](https://github.com/aslan-asilon31/aresto_laravel_postgresql/assets/116990574/ed473d26-b902-4541-b3bf-d2f7bd4559e1)
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Table of Contents 🔥
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<div class="">
+<ol>
+<a href="#screenshoot">💠 Screenshoots 💻</a>
+</ol>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<ol>
+<a href="#feature">💠 Features 📚</a>
+</ol>
 
-## Learning Laravel
+<ol>
+<a href="#analysis">💠 system analysis and design 📂</a>
+</ol>
+</div>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<hr>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+<div class="" id="screenshoot">
+## 💠 Screnshoots (not all pages in the screenshot) <br>
+----------- Landing Page
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+![aresto_landingpage](https://github.com/aslan-asilon31/aresto_laravel_postgresql/assets/116990574/ed473d26-b902-4541-b3bf-d2f7bd4559e1)
 
-## Laravel Sponsors
+---------------- Admin Page <br>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+</div>
 
-## Contributing
+<hr>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+<div class="" id="feature">
+## 💠 developing features for user
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Reservasi dan Manajemen Table: 
+- Fitur untuk menerima, mengatur, dan mengelola reservasi meja untuk tamu.<br>
+- Informasi tentang tamu dan preferensi khususnya dapat disimpan untuk memberikan pengalaman personalisasi.<br>
 
-## Security Vulnerabilities
+### Menu dan Pemesanan Makanan:
+-Kemampuan untuk menampilkan menu restoran dengan deskripsi dan harga.<br>
+-Integrasi dengan sistem pemesanan makanan untuk memfasilitasi pemesanan makanan dari meja tamu.<br>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Pesan Antar Makanan:
+-Fitur untuk menerima pesanan makanan untuk diambil atau diantar ke luar restoran.<br>
 
-## License
+### Manajemen Stok dan Inventaris:
+-Sistem untuk mengelola stok dan persediaan bahan makanan dan minuman.<br>
+-Notifikasi untuk mengingatkan staf tentang kebutuhan penggantian stok.<br>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Pembayaran dan Sistem Pencatatan Penjualan:
+-Sistem pembayaran yang terintegrasi untuk mengelola pembayaran dari tamu.<br>
+-Laporan penjualan harian, mingguan, dan bulanan untuk menganalisis kinerja restoran.<br>
+
+### Manajemen Kepegawaian:
+-Fitur untuk mengatur jadwal kerja karyawan, catatan kehadiran, dan manajemen gaji.<br>
+
+### Pengelolaan Pelayanan Tamu:
+-Sistem untuk mencatat permintaan khusus tamu dan memastikan layanan penuh perhatian.<br>
+
+### Integrasi Resepsionis dan Kasir:
+-Integrasi antara aplikasi manajemen restoran dengan bagian resepsionis dan kasir untuk membantu pemrosesan pembayaran tamu dan layanan terkait.<br>
+
+### Pelacakan Ulasan dan Penilaian:
+-Kemampuan untuk melacak dan memantau ulasan dan penilaian dari tamu untuk memahami kepuasan pelanggan dan mendapatkan umpan balik.<br>
+
+### Integrasi dengan Sistem POS:
+-Integrasi dengan sistem Point of Sale (POS) untuk mengoptimalkan proses pembayaran dan pelacakan penjualan.<br>
+
+### Manajemen Meja VIP dan Event Khusus:
+-Fitur untuk mengatur dan mengelola meja VIP serta acara khusus yang dilakukan di restoran.<br>
+
+### Laporan dan Analisis:
+-Fitur untuk menyajikan laporan tentang kinerja restoran, penjualan, dan analisis data untuk membantu pengambilan keputusan bisnis.<br>
+
+### Manajemen Layanan Acara Khusus:
+-Kemampuan untuk mengelola dan menyusun rencana untuk acara khusus dan pertemuan di restoran.<br>
+
+### Sistem Keamanan:
+-Perlindungan data pengguna, informasi pembayaran, dan keamanan sistem secara keseluruhan.<br>
+
+### Pemberitahuan dan Reminder:
+-Fitur untuk mengirimkan pemberitahuan atau reminder kepada tamu tentang reservasi, acara, atau penawaran khusus.<br>
+
+<hr>
+
+## 💠 developing features for developer
+- Implemented SOLID Design Pattern<br>
+- Laravel 10 bootstrap 5<br>
+- admin page using AdminLTE jeroenoten<br>
+- Payment Gateway using Midtrans<br>
+- Tables Using YajraDatatable<br>
+- Live Chat using tawk<br>
+- Export Import (Excel/PDF/CSV) using Laravel excel and barryvdh/laravel-dompdf<br>
+- API documentation using Swagger<br>
+</div>
+
+<hr>
+
+<div class="" id="analysis">
+## 💠 System analysis and design
+
+
+</div>

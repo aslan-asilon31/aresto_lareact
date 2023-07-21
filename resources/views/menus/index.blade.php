@@ -11,19 +11,22 @@
 <div class="card">
     <div class="card-header">
         <div class="card-tools">
+            <a href="menus/create" type="button" class="btn btn-sm btn-primary" style="" data-toggle="tooltip" title="create menus" >
+                <i class="fas fa-plus" ></i>
+            </a>
             <div class="btn-group">
-                <button type="button" class="btn btn-lg btn-secondary" data-toggle="tooltip" title="Upload File" onclick="openFileUploader()">
+                <button type="button" class="btn btn-sm btn-secondary" data-toggle="tooltip" title="Upload File" onclick="openFileUploader()">
                     <i class="fas fa-upload"></i>
                 </button>
                 <input type="file" id="fileUploader" style="display: none;">
             </div>
-            <button type="button" class="btn btn-lg btn-danger" style="" data-toggle="tooltip" title="Export PDF" onclick="exportData('pdf')">
+            <button type="button" class="btn btn-sm btn-danger" style="" data-toggle="tooltip" title="Export PDF" onclick="exportData('pdf')">
                 <i class="fas fa-file-pdf" ></i>
             </button>
-            <button type="button" class="btn btn-lg btn-warning"  data-toggle="tooltip" title="Export Excel" onclick="exportData('excel')">
+            <button type="button" class="btn btn-sm btn-warning"  data-toggle="tooltip" title="Export Excel" onclick="exportData('excel')">
                 <i class="fas fa-file-excel" style="color:white;"></i>
             </button>
-            <button type="button" class="btn btn-lg btn-info" data-toggle="tooltip" title="Export CSV" onclick="exportData('csv')">
+            <button type="button" class="btn btn-sm btn-info" data-toggle="tooltip" title="Export CSV" onclick="exportData('csv')">
                 <i class="fas fa-file-csv"></i>
             </button>
         </div>

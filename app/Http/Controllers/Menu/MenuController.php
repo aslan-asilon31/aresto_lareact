@@ -43,4 +43,22 @@ class MenuController extends Controller
         // Return the view for non-AJAX requests
         return view('menus.index');
     }
+
+    public function create()
+    {
+        // $categories = DB::select('SELECT * FROM categories');
+        // return view('products.create', compact('categories'));
+        return view('menus.create');
+    }
+    public function store(Request $request)
+    {
+        $menu = $this->menuService->createMenu($request->all());
+
+        if ($menu) {
+            return redirect()->route('menus.index')->with(['success' => 'Data Berhasil Disimpan!']);
+        } else {
+            return redirect()->route('menus.index')->with(['error' => 'Data Gagal Disimpan!']);
+        }
+    }
+
 }

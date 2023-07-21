@@ -63,7 +63,7 @@
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
 
                         {{-- // CART --}}
-                        <button class="btn btn-transparent">
+                        <a class="nav-item nav-link">
                             <svg
                               width="20"
                               height="20"
@@ -86,8 +86,8 @@
                                 stroke-linejoin="round"
                               />
                             </svg>
-                          </button>
-                          <button class="btn btn-transparent">
+                        </a>
+                        <a class="nav-item nav-link ">
                             <span class="badge rounded-pill bg-danger" style=""> 0</span>
                             <svg
                               width="24"
@@ -127,9 +127,9 @@
                                 stroke-linejoin="round"
                               />
                             </svg>
-                          </button>
-                          <button
-                            class="navbar-toggler"
+                        </a>
+                        <a
+                            class="navbar-toggler nav-item nav-link"
                             type="button"
                             data-bs-toggle="offcanvas"
                             data-bs-target="#offcanvasExample"
@@ -137,8 +137,52 @@
                             <span></span>
                             <span></span>
                             <span></span>
-                        </button>
+                        </a>
                         {{-- // END CART --}}
+
+                        {{-- profile  --}}
+                        <div class="nav-item nav-link">
+
+                            @if(auth()->check())
+
+                            {{-- dropdown image  --}}
+                            <div class="btn-group">
+                            <a class="nav-item nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="https://i.pravatar.cc/85" alt="Profile Image" class="profile-image" style="border-radius: 50%; width:40px; height:40px;">
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- Dropdown menu items -->
+                                <li><a class="dropdown-item" href="/home">View Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                <form action="{{ route('logout') }}" method="post">
+                                    @csrf
+                                    <button type="submit">Logout</button>
+                                </form>
+                                </li>
+                            </ul>
+                            </div>
+                            
+                            {{-- End dropdown image  --}}
+                        
+                            @else
+                                {{-- dropdown image  --}}
+                                <div class="btn-group">
+                                    <a class=" dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <img src="{{ asset('user_blank.png') }}" alt="Profile Image" class="profile-image" style="border-radius: 50%; width:40px; height:40px;">
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <!-- Dropdown menu items -->
+                                        <li><a class="dropdown-item" href="/login">Login</a></li>
+                                        <li><a class="dropdown-item" href="/register">Register</a></li>
+                                    </ul>
+                                </div>
+                                {{-- End dropdown image  --}}
+                            @endif
+                        </div>
+                        
+                        {{--End profile  --}}
 
                     </div>
                     <a href="" class="btn btn-primary py-2 px-4">Book A Table</a>
