@@ -11,15 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('menus', function (Blueprint $table) {
+        Schema::create('menu_jpns', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('category_id')->nullable();
-            $table->unsignedBigInteger('category_jpn_id')->nullable();
+            $table->unsignedBigInteger('menu_id')->nullable();
             $table->string('name')->nullable();
             $table->string('image')->nullable();
             $table->integer('price')->nullable();
             $table->text('description')->nullable();
-            $table->string('slug')->nullable();
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });
@@ -30,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('menus');
+        Schema::dropIfExists('menu_jpns');
     }
 };

@@ -29,7 +29,7 @@ class MenuController extends Controller
             return DataTables::of($data)
                 ->addIndexColumn()
                 ->addColumn('action', function ($row) {
-                    $actionBtn = '<a href="javascript:void(0)" class="detail btn btn-info btn-sm"><i class="fa fa-eye"></i></a><a href="javascript:void(0)" class="edit btn btn-success btn-sm"> <i class="fa fa-edit"></i> </a> <a href="javascript:void(0)" class="delete btn btn-danger btn-sm"><i class="fa fa-trash"></i></a> ';
+                    $actionBtn = '<a href="javascript:void(0)" class="detail btn btn-info btn-sm text-white"><i class="fa fa-eye"></i></a> &nbsp; &nbsp;<a href="javascript:void(0)" class="edit btn btn-success btn-sm"> <i class="fa fa-edit"></i> </a> &nbsp; &nbsp;<a href="javascript:void(0)" class="delete btn btn-danger btn-sm"><i class="fa fa-trash"></i></a> ';
                     return $actionBtn;
                 })
                 ->addColumn('category_name', function ($menu) {
@@ -60,5 +60,11 @@ class MenuController extends Controller
             return redirect()->route('menus.index')->with(['error' => 'Data Gagal Disimpan!']);
         }
     }
+
+    // public function form(Request $request){
+    //     $id = request()->segment(3);
+    //     // dd($id);
+
+    // }
 
 }
