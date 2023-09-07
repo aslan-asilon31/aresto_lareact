@@ -15,7 +15,7 @@ class MenuSeeder extends Seeder
     {
         Menu::create([
             'category_id' => 1,
-            'name' => 'Menu 1',
+            'name' => 'Telur',
             'image' => 'menu1.jpg',
             'price' => 1099,
             'description' => 'Description of Menu 1',
