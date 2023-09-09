@@ -13,7 +13,54 @@ class MenuRepositoryEloquent implements MenuRepositoryInterface
 {
     public function getAllMenus()
     {
-        return Menu::with('category')->get();
+        // return Menu::with('category')->get();
+        $results = DB::select("SELECT
+        a.*,
+        b.name AS category_name
+        FROM
+            menus AS a
+        INNER JOIN
+            categories AS b
+        ON
+            a.category_id = b.id");
+    
+        return $results;    
+    }
+
+    public function getAllMenuJpns()
+    {
+        // return Menu::with('category')->get();
+        $results = DB::select("SELECT
+        a.*,
+        b.id AS menu_id,
+        c.name AS category_name
+        FROM
+            menu_jpns AS a
+        INNER JOIN
+            menus AS b ON a.menu_id = b.id
+        INNER JOIN
+            categories AS c ON b.category_id = c.id;
+        ");
+    
+        return $results;    
+    }
+
+    public function getAllMenuChns()
+    {
+        // return Menu::with('category')->get();
+        $results = DB::select("SELECT
+        a.*,
+        b.id AS menu_id,
+        c.name AS category_name
+        FROM
+            menu_chns AS a
+        INNER JOIN
+            menus AS b ON a.menu_id = b.id
+        INNER JOIN
+            categories AS c ON b.category_id = c.id;
+        ");
+    
+        return $results;    
     }
 
     public function getMenuById($id)

@@ -24,6 +24,16 @@ class MenuService
         return $this->menuRepository->getAllMenus();
     }
 
+    public function getAllMenuJpns()
+    {
+        return $this->menuRepository->getAllMenuJpns();
+    }
+
+    public function getAllMenuChns()
+    {
+        return $this->menuRepository->getAllMenuChns();
+    }
+
     public function getMenuById($id)
     {
         return $this->menuRepository->getMenuById($id);

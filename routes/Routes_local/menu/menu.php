@@ -18,6 +18,12 @@ use App\Http\Controllers\Menu\MenuController;
 
     // Store a new item in the producr
     Route::post('/menus/store', [MenuController::class, 'store'])->name('menus.store');
+    
+    Route::post('/menus/language', [MenuController::class, 'language'])->name('menus.language');
+    
+    Route::get('/menus/japanese', [MenuController::class, 'japanese'])->name('menus.japanese');
+    
+    Route::get('/menus/chinese', [MenuController::class, 'chinese'])->name('menus.chinese');
 
     // Show a specific item in the cart
     // Route::get('/menus/{id}', [MenuController::class, 'show'])->name('menus.show');
