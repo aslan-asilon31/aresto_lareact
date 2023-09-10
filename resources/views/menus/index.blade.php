@@ -61,7 +61,6 @@
             <table class="table table-bordered yajra-datatable">
                 <thead>
                     <tr>
-                        <th>No</th>
                         <th>Name</th>
                         <th>Category Name</th>
                         <th>Image</th>
@@ -153,18 +152,17 @@ function datatable(){
         // data: {},
         ajax: "{{ url('menus') }}",
         columns: [
-            {data: 'DT_RowIndex', name: 'DT_RowIndex'},
-            {data: 'name', name: 'name'},
-            {data: 'category_name', name: 'category_name'},
-            {data: 'image', name: 'image'},
-            {data: 'price', name: 'price'},
-            {data: 'description', name: 'description'},
             {
                 data: 'action',
                 name: 'action',
                 orderable: true,
                 searchable: true
             },
+            {data: 'name', name: 'name'},
+            {data: 'category_name', name: 'category_name'},
+            {data: 'image', name: 'image'},
+            {data: 'price', name: 'price'},
+            {data: 'description', name: 'description'},
         ]
     });
 }
@@ -175,66 +173,65 @@ $(document).ready(function () {
 
 });
 
-function japanese(){
+    function japanese(){
 
-    $('#titleSub').text('メニュー');
+        $('#titleSub').text('メニュー');
 
-    var table = $('.yajra-datatable').DataTable({
-        processing: true,
-        serverSide: true,
-        bDestroy: true,
-        // data: {},
-        ajax: "/menus/japanese",
-        columns: [
-            {data: 'DT_RowIndex', name: 'DT_RowIndex'},
-            {data: 'name', name: 'name'},
-            {data: 'category_name', name: 'category_name'},
-            {data: 'image', name: 'image'},
-            {data: 'price', name: 'price'},
-            {data: 'description', name: 'description'},
-            {
-                data: 'action',
-                name: 'action',
-                orderable: true,
-                searchable: true
-            },
-        ]
+        var table = $('.yajra-datatable').DataTable({
+            processing: true,
+            serverSide: true,
+            bDestroy: true,
+            // data: {},
+            ajax: "/menus/japanese",
+            columns: [
+                {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+                {data: 'name', name: 'name'},
+                {data: 'category_name', name: 'category_name'},
+                {data: 'image', name: 'image'},
+                {data: 'price', name: 'price'},
+                {data: 'description', name: 'description'},
+                {
+                    data: 'action',
+                    name: 'action',
+                    orderable: true,
+                    searchable: true
+                },
+            ]
 
-    });
-
-
-}
-
-function chinese(){
-
-    $('#titleSub').text('菜单');
-
-    var table = $('.yajra-datatable').DataTable({
-        processing: true,
-        serverSide: true,
-        bDestroy: true,
-        // data: {},
-        ajax: "/menus/chinese",
-        columns: [
-            {data: 'DT_RowIndex', name: 'DT_RowIndex'},
-            {data: 'name', name: 'name'},
-            {data: 'category_name', name: 'category_name'},
-            {data: 'image', name: 'image'},
-            {data: 'price', name: 'price'},
-            {data: 'description', name: 'description'},
-            {
-                data: 'action',
-                name: 'action',
-                orderable: true,
-                searchable: true
-            },
-        ]
-
-    });
+        });
 
 
-}
+    }
 
+    function chinese(){
+
+        $('#titleSub').text('菜单');
+
+        var table = $('.yajra-datatable').DataTable({
+            processing: true,
+            serverSide: true,
+            bDestroy: true,
+            // data: {},
+            ajax: "/menus/chinese",
+            columns: [
+                {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+                {data: 'name', name: 'name'},
+                {data: 'category_name', name: 'category_name'},
+                {data: 'image', name: 'image'},
+                {data: 'price', name: 'price'},
+                {data: 'description', name: 'description'},
+                {
+                    data: 'action',
+                    name: 'action',
+                    orderable: true,
+                    searchable: true
+                },
+            ]
+
+        });
+
+
+    }
 
 
 </script>

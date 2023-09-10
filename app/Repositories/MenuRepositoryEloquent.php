@@ -65,7 +65,13 @@ class MenuRepositoryEloquent implements MenuRepositoryInterface
 
     public function getMenuById($id)
     {
-        return Menu::find($id);
+        $results = DB::table('menus AS a')
+        ->select('a.*', 'b.name AS category_name')
+        ->join('categories AS b', 'a.category_id', '=', 'b.id')
+        ->where('a.id', $id)
+        ->first();
+    
+        return $results;  
     }
 
     public function createMenu(array $data)
@@ -75,9 +81,12 @@ class MenuRepositoryEloquent implements MenuRepositoryInterface
 
     public function updateMenu($id, array $data)
     {
-        $menu = Menu::find($id);
-        $menu->update($data);
-        return $menu;
+        DB::table('menus')
+            ->where('id', $id)
+            ->update($data);
+    
+        // Optionally, you can return the updated record
+        return DB::table('menus')->find($id);
     }
 
     public function deleteMenu($id)

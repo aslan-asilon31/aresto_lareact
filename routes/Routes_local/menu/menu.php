@@ -24,6 +24,8 @@ use App\Http\Controllers\Menu\MenuController;
     Route::get('/menus/japanese', [MenuController::class, 'japanese'])->name('menus.japanese');
     
     Route::get('/menus/chinese', [MenuController::class, 'chinese'])->name('menus.chinese');
+    
+    Route::get('/menus/{menu}/edit', [MenuController::class, 'edit'])->name('menus.edit');
 
     // Show a specific item in the cart
     // Route::get('/menus/{id}', [MenuController::class, 'show'])->name('menus.show');
@@ -32,7 +34,7 @@ use App\Http\Controllers\Menu\MenuController;
     // Route::get('/menus/{menu}/edit', [MenuController::class, 'edit'])->name('menus.edit');
 
     // Update a specific item in the cart
-    // Route::put('/menus/{menu}', [MenuController::class, 'update'])->name('menus.update');
+    Route::put('/menus/{menu}', [MenuController::class, 'update'])->name('menus.update');
 
     // Remove a specific item from the cart
     // Route::delete('/menus/{menu}', [MenuController::class, 'destroy'])->name('menus.destroy');
