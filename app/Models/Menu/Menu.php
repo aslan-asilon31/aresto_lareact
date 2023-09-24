@@ -8,15 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Menu extends Model
 {
     use HasFactory;
+    // protected $table = 'vw_menus_modified';
+    protected $table = 'menus';
     protected $primaryKey = 'id';
 
-    protected $fillable = [
-        'category_id',
-        'name',
-        'image',
-        'price',
-        'description',
-    ];
+    // protected $fillable = [
+    //     'category_id',
+    //     'name',
+    //     'image',
+    //     'price',
+    //     'description',
+    // ];
 
     public function category()
     {

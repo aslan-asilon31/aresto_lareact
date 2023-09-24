@@ -13,7 +13,6 @@ class MenuRepositoryEloquent implements MenuRepositoryInterface
 {
     public function getAllMenus()
     {
-        // return Menu::with('category')->get();
         $results = DB::select("SELECT
         a.*,
         b.name AS category_name
@@ -22,7 +21,7 @@ class MenuRepositoryEloquent implements MenuRepositoryInterface
         INNER JOIN
             categories AS b
         ON
-            a.category_id = b.id");
+            a.cat_id = b.id");
     
         return $results;    
     }

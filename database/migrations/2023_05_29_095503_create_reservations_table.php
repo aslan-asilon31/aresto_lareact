@@ -19,6 +19,9 @@ return new class extends Migration
             $table->string('reservation_date');
             $table->string('number_guest');
             $table->string('slug');
+            $table->string('lang_id')->nullable();
+            $table->string('lang')->nullable();
+            $table->timestamp('updated_by')->nullable();
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });

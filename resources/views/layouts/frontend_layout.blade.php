@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Aresto Restaurant</title>
+    <title>{{ __('welcome.title') }}</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -48,19 +48,35 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="service.html" class="nav-item nav-link">Service</a>
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
+                        <a href="index.html" class="nav-item nav-link active">{{ __('welcome.home_title') }}</a>
+                        {!! ModalHelper::modalLink(route('your.route.name'), 'myModal', 'Open Modal', 'modal-lg') !!}
+
+                        <a href="about.html" class="nav-item nav-link">{{ __('welcome.about_title') }}</a>
+                        <a href="service.html" class="nav-item nav-link">{{ __('welcome.service_title') }}</a>
+                        <a href="menu.html" class="nav-item nav-link">{{ __('welcome.menu_title') }}</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{ __('welcome.page_title') }}</a>
                             <div class="dropdown-menu m-0">
                                 <a href="booking.html" class="dropdown-item">Booking</a>
                                 <a href="team.html" class="dropdown-item">Our Team</a>
                                 <a href="testimonial.html" class="dropdown-item">Testimonial</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <div class="nav-item dropdown">
+                            {{-- <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Languages</a> --}}
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {{strtoupper(Lang::locale())}}
+                            </a>
+                            <div class="dropdown-menu m-0">
+                                <a href="lang/id" class="dropdown-item">{{ __('welcome.indonesia_title') }}</a>
+                                <a href="lang/en" class="dropdown-item">{{ __('welcome.english_title') }}</a>
+                                <a href="lang/ja" class="dropdown-item">{{ __('welcome.japanese_title') }}</a>
+                                <a href="lang/romaji" class="dropdown-item">Japan - Romaji</a>
+                                <a href="lang/ch" class="dropdown-item">{{ __('welcome.mandarin_title') }}</a>
+                                <a href="lang/pinyin" class="dropdown-item">Mandarin - Pinyin</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">{{ __('welcome.contact_title') }}</a>
 
                         {{-- // CART --}}
                         <a class="nav-item nav-link">
@@ -174,8 +190,8 @@
                                     </a>
                                     <ul class="dropdown-menu">
                                         <!-- Dropdown menu items -->
-                                        <li><a class="dropdown-item" href="/login">Login</a></li>
-                                        <li><a class="dropdown-item" href="/register">Register</a></li>
+                                        <li><a class="dropdown-item" href="/login">{{ __('welcome.login_title') }}</a></li>
+                                        <li><a class="dropdown-item" href="/register">{{ __('welcome.register_title') }}</a></li>
                                     </ul>
                                 </div>
                                 {{-- End dropdown image  --}}
@@ -185,7 +201,7 @@
                         {{--End profile  --}}
 
                     </div>
-                    <a href="" class="btn btn-primary py-2 px-4">Book A Table</a>
+                    <a href="" class="btn btn-primary py-2 px-4">{{ __('welcome.book_a_table') }}</a>
                 </div>
             </nav>
 
@@ -193,9 +209,9 @@
                 <div class="container my-5 py-5">
                     <div class="row align-items-center g-5">
                         <div class="col-lg-6 text-center text-lg-start">
-                            <h1 class="display-3 text-white animated slideInLeft">Enjoy Our<br>Delicious Meal</h1>
-                            <p class="text-white animated slideInLeft mb-4 pb-2">Selamat datang di Aresto, restoran bintang 5 dan telah mendapatkan penghargaan bintang Michellin yang menawarkan pengalaman kuliner yang tak tertandingi. Sebagai destinasi kuliner pilihan.</p>
-                            <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>
+                            <h1 class="display-3 text-white animated slideInLeft">{{ __('welcome.enjoy_our_delicious_meal') }}</h1>
+                            <p class="text-white animated slideInLeft mb-4 pb-2">{{ __('welcome.welcome_to_aresto') }}</p>
+                            <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">{{ __('welcome.book_a_table') }}</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                             <img class="img-fluid" src="{{ asset('assets/frontend/img/hero.png') }}" alt="">
@@ -215,8 +231,8 @@
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Company</h4>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">{{ __('welcome.about_title') }}</a>
+                        <a class="btn btn-link" href="">{{ __('welcome.contact_title') }}</a>
                         <a class="btn btn-link" href="">Reservation</a>
                         <a class="btn btn-link" href="">Privacy Policy</a>
                         <a class="btn btn-link" href="">Terms & Condition</a>

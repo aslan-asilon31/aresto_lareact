@@ -17,6 +17,8 @@ return new class extends Migration
             $table->unsignedBigInteger('member_id');
             $table->string('grant_total');
             $table->string('slug');
+            $table->string('lang_id')->nullable();
+            $table->string('lang')->nullable();
             $table->timestamps();
         });
     }

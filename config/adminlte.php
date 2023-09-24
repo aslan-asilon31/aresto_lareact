@@ -367,6 +367,24 @@ return [
                
             ],
         ],
+        [
+            'text' => 'Language',
+            'topnav_right' => true,
+            'icon' => 'flag-icon flag-icon-us',
+            'submenu' => [
+                [
+                    'text'=>'English',
+                    'icon' => 'flag-icon flag-icon-us',
+                    'url'=> 'lang/en'
+                ],
+                [
+                    'text'=>'Japanese',
+                    'icon' => 'flag-icon flag-icon-ja',
+                    'url'=> 'lang/ja'
+                ]
+            ]
+        ],
+        
         ['header' => 'Config'],
         [
             'text' => 'Log out',

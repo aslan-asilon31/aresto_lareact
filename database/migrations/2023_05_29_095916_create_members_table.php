@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('review');
             $table->string('rating');
             $table->string('slug');
+            $table->string('lang_id')->nullable();
+            $table->string('lang')->nullable();
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });

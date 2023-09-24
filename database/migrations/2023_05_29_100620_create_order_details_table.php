@@ -16,6 +16,8 @@ return new class extends Migration
             $table->unsignedBigInteger('order_id');
             $table->unsignedBigInteger('member_id');
             $table->string('slug');
+            $table->string('lang_id')->nullable();
+            $table->string('lang')->nullable();
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });
