@@ -49,7 +49,6 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="index.html" class="nav-item nav-link active">{{ __('welcome.home_title') }}</a>
-                        {!! ModalHelper::modalLink(route('your.route.name'), 'myModal', 'Open Modal', 'modal-lg') !!}
 
                         <a href="about.html" class="nav-item nav-link">{{ __('welcome.about_title') }}</a>
                         <a href="service.html" class="nav-item nav-link">{{ __('welcome.service_title') }}</a>

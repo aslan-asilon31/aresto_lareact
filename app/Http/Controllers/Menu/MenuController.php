@@ -22,41 +22,41 @@ class MenuController extends Controller
         $this->menuService = $menuService;
     }
 
-    // public function index(){
+    public function index(){
 
-    //     $query =  $menus = DB::select("SELECT * FROM menus");
-    //     // dd($query);
-    //     return view('menus.index', compact('query'));
+        $query =  $menus = DB::select("SELECT * FROM menus");
+        // dd($query);
+        return $query;
 
-    // }
-
-    public function index(Request $request)
-    {
-        $titleSub = 'Menu';
-        $data = $this->menuService->getAllMenus();
-        if ($request->ajax()) {
-    
-            return DataTables::of($data)
-            
-                ->addIndexColumn()
-                ->addColumn('action', function ($row) {
-                    $actionBtn = '<a href="javascript:void(0)" class="detail btn btn-info btn-sm text-white"><i class="fa fa-eye"></i></a> &nbsp; &nbsp;
-                    <a href="/menus/' . $row->id . '/edit" class="edit btn btn-success btn-sm"> <i class="fa fa-edit"></i> </a> &nbsp; &nbsp;
-                    <a href="javascript:void(0)" class="delete btn btn-danger btn-sm"><i class="fa fa-trash"></i></a> ';
-                    return $actionBtn;
-                })
-                ->addColumn('category_name', function ($menu) {
-                    return $menu->category_name;
-                })
-                
-                ->rawColumns(['action','category_name'])
-                ->make(true);
-        }
-
-    
-        // Return the view for non-AJAX requests
-        return view('menus.index', compact('titleSub'));
     }
+
+    // public function index(Request $request)
+    // {
+    //     $titleSub = 'Menu';
+    //     $data = $this->menuService->getAllMenus();
+    //     if ($request->ajax()) {
+    
+    //         return DataTables::of($data)
+            
+    //             ->addIndexColumn()
+    //             ->addColumn('action', function ($row) {
+    //                 $actionBtn = '<a href="javascript:void(0)" class="detail btn btn-info btn-sm text-white"><i class="fa fa-eye"></i></a> &nbsp; &nbsp;
+    //                 <a href="/menus/' . $row->id . '/edit" class="edit btn btn-success btn-sm"> <i class="fa fa-edit"></i> </a> &nbsp; &nbsp;
+    //                 <a href="javascript:void(0)" class="delete btn btn-danger btn-sm"><i class="fa fa-trash"></i></a> ';
+    //                 return $actionBtn;
+    //             })
+    //             ->addColumn('category_name', function ($menu) {
+    //                 return $menu->category_name;
+    //             })
+                
+    //             ->rawColumns(['action','category_name'])
+    //             ->make(true);
+    //     }
+
+    
+    //     // Return the view for non-AJAX requests
+    //     return view('menus.index', compact('titleSub'));
+    // }
 
     public function create()
     {
