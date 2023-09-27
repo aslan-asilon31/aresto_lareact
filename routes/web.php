@@ -6,7 +6,7 @@ use App\Http\Controllers\LocalizationController;
 
 
 Route::get('/', function () {
-    return view('visitors/landingpage');
+    return view('welcome');
 });
 
 Auth::routes();
